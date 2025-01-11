@@ -70,3 +70,5 @@ function startLottieAnimation() {
             });
         });
 }
+
+window.addEventListener('resize', moveLottieContainer);
