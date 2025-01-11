@@ -1,3 +1,10 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #f4f4f4;
@@ -6,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  margin-top: 48px;
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
@@ -137,4 +144,14 @@ button {
 #download-btn:active {
   border: 2px solid #5E5CE5;
   background-color: #E6E5FF;
+}
+
+#lottie-container {
+  width: 850px;
+  transform: translate(-50%, -50%) rotate(-90deg) scaleX(-1);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  left: 35%;
+  position: fixed;
 }
