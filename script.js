@@ -71,4 +71,19 @@ function startLottieAnimation() {
         });
 }
 
+function moveLottieContainer() {
+   const buttonRect = downloadBtn.getBoundingClientRect();
+    const containerWidth = lottieStickyContainer.offsetWidth;
+    const containerHeight = lottieStickyContainer.offsetHeight;
+
+    const buttonX = buttonRect.left + window.pageXOffset;
+    const buttonY = buttonRect.top + window.pageYOffset;
+
+    const containerX = buttonX + (buttonRect.width / 2) - (containerWidth / 2);
+    const containerY = buttonY + (buttonRect.height / 2) - (containerHeight / 2);
+
+    lottieStickyContainer.style.left = `${containerX}px`;
+    lottieStickyContainer.style.top = `${containerY}px`;
+}
+
 window.addEventListener('resize', moveLottieContainer);
